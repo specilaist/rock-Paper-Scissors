@@ -14,13 +14,22 @@
             var ties = 0;
             var losses = 0;
 
+            // this is the way to start by adding a four loop to for 10 instances
             for (var i = 0; i < 10; i++) {
+                  // now that this is the actual prompt
+                  // this prompt also establishes the variable .userChoice
+                  // input answers are put o .toLowerCase
                   var userChoice = prompt("Chose r, p, or s to play Rock Paper Scissors").toLowerCase();
+                  // vvv if sets in motion logic
                   if (userChoice === "r" || userChoice === "p" || userChoice === "s") {
+                        // vvv creating variable that randomly selects array value
                         var rng = Math.floor(Math.random() * compChoice.length);
+                        // vvv creating variable compChoices that = the array * the random variable by length
                         var compChoices = compChoice[rng];
                         alert("Computer's choice is " + compChoices);
                         if (
+                              // sets the parameters of the game
+                              // inaccurate variable will return only losses
                               (userChoice === "r" && compChoices === "s") ||
                               (userChoice === "p" && compChoices === "r") ||
                               (userChoice === "s" && compChoices === "p")) {
@@ -33,15 +42,15 @@
                                     losses++;
                                     alert("You've lost " + losses + " times");
                               }
-
+                              //making sure of the necessary input
+                              //game will continue until proper input
                         } else {
                               alert("You didn't select the letter n, p or s ");
+                              // worked on this a little bit to make sure the person can't exit
                               i = 0;
                         }
 
                   }
-
-
 
             </script>
 
