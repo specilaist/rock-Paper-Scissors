@@ -21,17 +21,17 @@
                         var compChoices = compChoice[rng];
                         alert("Computer's choice is " + compChoices);
                         if (
-                              (userChoice === "r" && compChoice === "s") ||
-                              (userChoice === "p" && compChoice === "r") ||
-                              (userChoice === "s" && compChoice === "p")) {
+                              (userChoice === "r" && compChoices === "s") ||
+                              (userChoice === "p" && compChoices === "r") ||
+                              (userChoice === "s" && compChoices === "p")) {
                                     wins++;
-                                    alert("You've won " + wins + "times");
+                                    alert("You've won " + wins + " times");
                               } else if (userChoice === compChoices) {
                                     ties++;
-                                    alert("You've tied " + ties + "times");
+                                    alert("You've tied " + ties + " times");
                               } else {
                                     losses++;
-                                    alert("You've lost " + losses + "times");
+                                    alert("You've lost " + losses + " times");
                               }
 
                         }
